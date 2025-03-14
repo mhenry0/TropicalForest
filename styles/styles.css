@@ -1,0 +1,144 @@
+.hero-section {
+    height: 100vh;
+    background: url('images/hero.jpg') no-repeat center center/cover;
+}
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+body {
+    font-family: 'Poppinns', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+/* Custom Styles */
+.footer {
+    background-color: #2c185d;
+    color: #ffffff;
+    padding: 2rem 0;
+    font-weight: 400;
+}
+.footer .footer-logo img {
+    width: 100px;
+}
+.footer .description {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+.footer .social-icons a {
+    color: #ffffff;
+    margin-right: 10px;
+}
+.footer .bottom-bar {
+    border-top: 1px solid #ffffff;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+    
+}
+
+
+.custom-navbar {
+    background-color: #ffffff; /* Dark Green */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    
+    color: #51c01d !important; /* White text */
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ed6227 !important; /* Yellow on hover */
+}
+
+
+.hero-section {
+    background-image: url('../assets/img/banner.jpeg'); /* Change to your image path */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* No repeating */
+    height: 130vh; /* Full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Ensure text is visible */
+}
+
+.hero-section .container {
+    padding: 30px;
+    border-radius: 10px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* Fondo Parallax */
+   .parallax {
+    background-image: url('../assets/img/img3.jpg'); /* Cambia la URL */
+    height: 900px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Sección de contenido normal */
+.content {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+
+
+#ed6227
+
+#51c01d
+
+#2c185d

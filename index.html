@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="./assets/img/logo.jpg">
+    <title>Tropical Forest CR</title>
+    <meta name="description" content="Explora la naturaleza con Tropical Forest CR">
+    <!-- Add Bootstrap Icons CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/img/logo.jpg" alt="Tropical Forest CR Logo" width="60" height="60">
+                Tropical Forest
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#presentacion">Presentación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tours">Tours</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-link text-success" id="translate-button">
+                            <i class="bi bi-translate" style="font-size: 1.5rem;"></i>
+                        </button>
+                        <div id="google_translate_container" style="display: none;">
+                            <div id="google_translate_element"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Script de Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                includedLanguages: 'en,fr,de,pt,it,nl'
+            }, 'google_translate_element');
+        }
+    
+        // Mostrar/ocultar el menú de traducción al hacer clic en el icono
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("translate-button").addEventListener("click", function () {
+                var translateContainer = document.getElementById("google_translate_container");
+                translateContainer.style.display = (translateContainer.style.display === "none" || translateContainer.style.display === "") ? "block" : "none";
+            });
+        });
+    </script>
+    
+    <script type="text/javascript" 
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+    
+    
+
+
+<!-- 🟢 HERO SECTION -->
+<header id="hero" class="hero-section d-flex align-items-center text-white text-center">
+    <div class="container">
+        <h1 class="display-4">Descubre la naturaleza con Tropical Forest</h1>
+        <p class="lead">Explora paisajes increíbles y vive experiencias inolvidables</p>
+        
+        <!-- Botón de reserva personalizado -->
+        <a href="#reservas" class="btn-reserva">Reservar</a>
+        <a href="#reservas" class="btn-contacto">Contacto</a>
+
+    </div>
+</header>
+
+<!-- 🔹 Estilos personalizados -->
+<style>
+
+.btn-reserva {
+    margin-right: 10px; /* Agrega espacio a la derecha */
+}
+
+    .btn-reserva, .btn-contacto {
+        display: inline-block;
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+        z-index: 1;
+    }
+
+    /* Colores específicos por botón */
+    .btn-reserva {
+        background: #ed6227; /* Naranja */
+    }
+
+    .btn-contacto {
+        background: #51c01d; /* Verde */
+    }
+
+    .btn-reserva::before, .btn-contacto::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: #2c185d; /* Azul oscuro para el efecto hover */
+        transition: left 0.4s ease-in-out;
+        z-index: -1;
+    }
+
+    .btn-reserva:hover::before, 
+    .btn-contacto:hover::before {
+        left: 0;
+    }
+
+    /* Asegura que el texto siempre sea blanco */
+    .btn-reserva:hover, 
+    .btn-contacto:hover {
+        color: white;
+    }
+</style>
+
+
+
+
+
+
+    <!-- 🟢 PRESENTACIÓN -->
+    <section id="presentacion" class="container my-5 text-center">
+        <h2 style="color: #51c01d; font-size: 35px; font-weight: bold;">Sobre Nosotros</h2>
+        <p class="lead" style="text-align: justify;">
+            En <strong>Tropical Forest</strong> nos especializamos en ofrecer <em>experiencias auténticas</em> en la naturaleza, combinando aventura, <strong>sostenibilidad</strong> y una profunda conexión con el entorno.<br><br>
+            Ubicados en la hermosa región de La Pastora, Tarrazú, en la Zona de Los Santos, San Marcos de Tarrazú, Costa Rica, ofrecemos actividades de <strong>hiking</strong>, <strong>escalada</strong> y mucho más. Cada aventura está diseñada para sumergir a nuestros visitantes en paisajes impresionantes y brindarles un contacto único con la biodiversidad local.<br><br>
+            En Tropical Forest, la experiencia no se limita solo a la aventura, sino que también promovemos la conservación activa. A través de nuestras actividades, buscamos sensibilizar sobre la importancia de cuidar los recursos naturales y fomentar un turismo responsable.<br><br>
+            Nuestro compromiso con el medio ambiente es fundamental. Cada actividad es una oportunidad para disfrutar y aprender, mientras colaboramos para preservar los ecosistemas de esta región única.<br><br>
+            <span class="d-none d-sm-inline">¡Te invitamos a vivir una experiencia genuina de ecoturismo, llena de emoción, aprendizaje y respeto por la naturaleza!</span>
+            <span class="d-inline d-sm-none">¡Únete a nosotros para una experiencia única de ecoturismo!</span>
+        </p>
+            </section>
+   
+
+    <!-- 🟢 TOURS: Escalada de Árboles -->
+<section id="tours" class="container my-5">
+    <h2 class="text-center mb-5" style="color: #51c01d; font-size: 35px; font-weight: bold;">Tour de Escalada de Árboles</h2>
+    <div class="row gap-4 gap-md-0">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img src="./assets/img/banner.jpeg" class="card-img-top" alt="Escalada de Árboles">
+                <div class="card-body">
+                    <h5 class="card-title">Escalada de Árboles</h5>
+                    <p class="card-text">Únete a una experiencia única escalando gigantescos árboles en la selva tropical de Costa Rica. Esta actividad te permitirá adentrarte en el corazón del bosque mientras disfrutas de vistas impresionantes y aprendes sobre el ecosistema que rodea estos majestuosos árboles. Nuestros guías expertos, con un profundo conocimiento de la flora y fauna local, te acompañarán a lo largo del recorrido, brindándote información sobre cada planta y animal que encuentres en el camino.</p>
+                    
+                    <p class="card-text">Durante la escalada, podrás observar el bosque desde una perspectiva totalmente nueva, apreciando la diversidad de la vida silvestre y los diversos estratos del bosque tropical. Esta actividad es ideal para los amantes de la naturaleza que buscan una dosis de adrenalina y un contacto cercano con el medio ambiente.</p>
+                    
+                    <ul>
+                        <li><strong>Duración:</strong> 3 horas</li>
+                        <li><strong>Lo que incluye:</strong> Guía experto, equipo de seguridad de última tecnología, fotografía profesional durante el tour, bebida refrescante y snack energizante</li>
+                        <li><strong>Código de vestimenta:</strong> Ropa cómoda, zapatos cerrados y resistentes, protector solar, repelente de insectos, y una gorra para protegerse del sol</li>
+                        <li><strong>Requisitos:</strong> No es necesario tener experiencia previa en escalada, solo se requiere un buen estado físico y ganas de disfrutar la aventura</li>
+                        <li><strong>Ubicación:</strong> La actividad se lleva a cabo en una de las zonas más biodiversas de Costa Rica, específicamente en la región de La Pastora, Tarrazú, un área reconocida por su gran riqueza natural</li>
+                    </ul>
+                    
+                    <p class="card-text">Al final de la actividad, tendrás la oportunidad de relajarte y compartir tus experiencias con otros participantes, mientras disfrutas de una bebida refrescante y algunas fotos para recordar este momento único en la naturaleza.</p>
+                    <!-- Sección de Precio -->
+<div class="mt-4">
+    <h4 class="text-center" style="color: #51c01d; font-weight: bold;">Precio del Tour</h4>
+    <p class="text-center" style="font-size: 20px; font-weight: bold;">$65 por persona</p>
+</div>
+
+<!-- Sección de Condiciones de Pago y Cancelación -->
+<div class="mt-4">
+    <h4 class="text-center" style="color: #51c01d; font-weight: bold;">Condiciones de Pago y Cancelación</h4>
+    <ul style="text-align: justify;">
+        <li><strong>Reservación:</strong> Se requiere un adelanto del 50% para confirmar la reserva. El pago completo debe realizarse al menos 24 horas antes del tour.</li>
+        <li><strong>Métodos de pago:</strong> Aceptamos pagos mediante transferencia bancaria, PayPal y tarjetas de crédito/débito.</li>
+        <li><strong>Política de cancelación:</strong> 
+            <ul>
+                <li>Cancelaciones con más de 48 horas de anticipación: reembolso completo.</li>
+                <li>Cancelaciones entre 24 y 48 horas antes del tour: reembolso del 50%.</li>
+                <li>Cancelaciones con menos de 24 horas o no presentarse al tour: no hay reembolso.</li>
+            </ul>
+        </li>
+        <li><strong>Clima y factores externos:</strong> En caso de condiciones climáticas extremas que impidan la actividad, se ofrecerá una reprogramación sin costo adicional o el reembolso total.</li>
+        <li><strong>Modificaciones de reserva:</strong> Se permite un cambio de fecha sin penalización con al menos 48 horas de anticipación.</li>
+    </ul>
+</div>
+
+<!-- 🔹 Reserva ahora con estilo personalizado -->
+<a href="#" class="btn-reserva2">Reservar</a>
+
+<!-- 🔹 Estilos personalizados -->
+<style>
+    .btn-reserva2 {
+        display: inline-block;
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background: #51c01d; /* Naranja como color base */
+        border: none;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+        z-index: 1;
+    }
+
+    .btn-reserva2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: transparent; /* Fondo inicial transparente */
+        transition: left 0.4s ease-in-out, background 0.4s ease-in-out;
+        z-index: -1;
+    }
+
+    .btn-reserva2:hover::before {
+        left: 0;
+        background: #ed6227; /* Verde para el efecto hover */
+    }
+
+    /* Asegura que el texto siempre sea blanco */
+    .btn-reserva2:hover {
+        color: white;
+    }
+</style>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+       <!-- Galería de imágenes -->
+<div class="col-md-6 mb-4">
+    <h5 class="text-center mb-3">Galería</h5>
+    <div class="row">
+        <!-- Image 1 -->
+        <div class="col-md-4">
+            <img src="./assets/img/banner.jpeg" class="img-fluid rounded mb-3 gallery-img"
+                data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-index="0">
+        </div>
+        <!-- Image 2 -->
+        <div class="col-md-4">
+            <img src="./assets/img/banner.jpeg" class="img-fluid rounded mb-3 gallery-img"
+                data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-index="1">
+        </div>
+        <!-- Image 3 -->
+        <div class="col-md-4">
+            <img src="./assets/img/banner.jpeg" class="img-fluid rounded mb-3 gallery-img"
+                data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-index="2">
+        </div>
+    </div>
+</div>
+
+<!-- Modal con Carrusel -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Galería</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselGallery" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/img/banner.jpeg" class="d-block w-100" id="modalImage">
+                            <p class="text-center mt-2" id="modalDescription">Descripción de la imagen.</p>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselGallery" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselGallery" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".gallery-img");
+    const modalImage = document.getElementById("modalImage");
+    const modalDescription = document.getElementById("modalDescription");
+    const carouselInner = document.querySelector(".carousel-inner");
+
+    const imageSources = [
+        { src: "./assets/img/banner.jpeg", desc: "Aquí estás subiendo un árbol gigante en medio de la selva tropical." },
+        { src: "./assets/img/banner.jpeg", desc: "Vista impresionante desde lo alto de los árboles." },
+        { src: "./assets/img/banner.jpeg", desc: "Disfrutando de la cima de un árbol, rodeado de naturaleza exuberante." }
+    ];
+
+    images.forEach((img, index) => {
+        img.addEventListener("click", () => {
+            carouselInner.innerHTML = "";
+            imageSources.forEach((image, i) => {
+                const activeClass = i === index ? "active" : "";
+                carouselInner.innerHTML += `
+                    <div class="carousel-item ${activeClass}">
+                        <img src="${image.src}" class="d-block w-100">
+                        <p class="text-center mt-2">${image.desc}</p>
+                    </div>
+                `;
+            });
+        });
+    });
+});
+</script>
+
+    </div>
+</section>
+
+<!-- Modal for Image -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Descripción de la Imagen</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="" id="modalImage" class="img-fluid rounded mb-3" alt="Imagen Modal">
+                <p id="modalDescription" class="text-muted"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap 5.3.3 JS and Dependencies -->
+
+
+<script>
+    // Get all images with data-bs-toggle="modal"
+    const images = document.querySelectorAll('[data-bs-toggle="modal"]');
+
+    // Add event listener to each image
+    images.forEach(image => {
+        image.addEventListener('click', (event) => {
+            const imageSrc = event.target.src;
+            const imageDescription = event.target.getAttribute('data-bs-description');
+
+            // Set image source and description in modal
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('modalDescription').textContent = imageDescription;
+        });
+    });
+</script>
+
+
+
+
+
+
+
+<style>
+    .custom-card {
+        position: relative;
+        color: white;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        border: none;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .custom-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.5);
+        border-radius: 10px;
+    }
+
+    /* Fondos personalizados */
+    .card-1::before { background-image: url('./assets/img/img2.jpg'); }
+    .card-2::before { background-image: url('./assets/img/img2.jpg'); }
+    .card-3::before { background-image: url('./assets/img/img2.jpg'); }
+    .card-4::before { background-image: url('./assets/img/img2.jpg'); }
+    .card-5::before { background-image: url('./assets/img/img2.jpg'); }
+    .card-6::before { background-image: url('./assets/img/img2.jpg'); }
+
+
+    .custom-card .card-body {
+        position: relative;
+        z-index: 1;
+    }
+
+    .custom-card i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+<div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Tarjeta 1 -->
+        <div class="col">
+            <div class="card custom-card card-1">
+                <div class="card-body">
+                    <i class="bi bi-binoculars"></i>
+                    <h5 class="card-title">Explora con Tranquilidad</h5>
+                    <p class="card-text">Descubre la naturaleza sin preocupaciones en un ambiente seguro y guiado.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="col">
+            <div class="card custom-card card-2">
+                <div class="card-body">
+                    <i class="bi bi-tools"></i>
+                    <h5 class="card-title">Equipamiento Profesional</h5>
+                    <p class="card-text">Usamos equipo de calidad para que tu experiencia sea óptima.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="col">
+            <div class="card custom-card card-3">
+                <div class="card-body">
+                    <i class="bi bi-globe2"></i>
+                    <h5 class="card-title">Apoyo a la Sostenibilidad</h5>
+                    <p class="card-text">Cada visita contribuye a la conservación del ecosistema.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="col">
+            <div class="card custom-card card-4">
+                <div class="card-body">
+                    <i class="bi bi-camera"></i>
+                    <h5 class="card-title">Recuerdos Inolvidables</h5>
+                    <p class="card-text">Captura momentos únicos en escenarios naturales impresionantes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 5 -->
+        <div class="col">
+            <div class="card custom-card card-5">
+                <div class="card-body">
+                    <i class="bi bi-lightbulb"></i>
+                    <h5 class="card-title">Aprende mientras Disfrutas</h5>
+                    <p class="card-text">Conoce más sobre la fauna y flora en cada recorrido educativo.</p>
+                </div>
+            </div>
+        </div>
+        
+<!-- Tarjeta 6 -->
+<div class="col">
+    <div class="card custom-card card-6">
+        <div class="card-body">
+            <i class="bi bi-tree"></i>
+            <h5 class="card-title">Conexión con la Naturaleza</h5>
+            <p class="card-text">Sumérgete en la belleza natural y descubre lugares únicos en cada aventura.</p>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+
+<!-- Sección Galería -->
+<section id="galeria">
+    <!-- Contenido de Galería -->
+  </section>
+  
+<h2 class="text-center mb-4" style="color: #51c01d; font-size: 35px; font-weight: bold;" >Galería</h2>
+
+<div class="container">
+    <div class="row">
+        <!-- YouTube Video -->
+        <div class="col-md-6 d-flex justify-content-center align-items-center mb-4">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/7FYo-QTwuwE?si=Z2uFRFipDmcPWyD4" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Carousel -->
+        <div class="col-md-6">
+            <div id="gallerycarousel" class="carousel slide text-center" data-bs-ride="false" style="max-width: 100%; margin: 0 auto;">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <!-- First Tour Card -->
+                        <div class="card">
+                            <img src="./assets/img/banner.jpeg" loading="lazy" class="card-img-top mx-auto" alt="The Tropical Rainforest of the Osa region." style="width: 100%; height: 400px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text">The Tropical Rainforest of the Osa region.</p>
+                            </div>
+                            <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                                Slide 1 / 9
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!-- Second Tour Card -->
+                        <div class="card">
+                            <img src="./assets/img/banner.jpeg" loading="lazy" class="card-img-top mx-auto" alt="The Tropical Rainforest of the Osa region." style="width: 100%; height: 400px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text">The Golden Hour, otherwise, known as La Hora de los Monos by locals (The Monkeys' Time) since it is typical of howler monkeys to howl at dusk.</p>
+                            </div>
+                            <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                                Slide 2 / 9
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!-- Third Tour Card -->
+                        <div class="card">
+                            <img src="./assets/img/banner.jpeg" loading="lazy" class="card-img-top mx-auto" alt="The Tropical Rainforest of the Osa region." style="width: 100%; height: 400px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text">The biggest poisonous frog in Costa Rica; Dendrobates auratus.</p>
+                            </div>
+                            <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                                Slide 3 / 9
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!-- Fourth Tour Card -->
+                        <div class="card">
+                            <img src="./assets/img/banner.jpeg" loading="lazy" class="card-img-top mx-auto" alt="The Tropical Rainforest of the Osa region." style="width: 100%; height: 400px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text">The Crested Guan (Penelope purpurascens) lives within the property. They are very curious animals.</p>
+                            </div>
+                            <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                                Slide 4 / 9 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!-- Fifth Tour Card -->
+                        <div class="card">
+                            <img src="./assets/img/banner.jpeg" loading="lazy" class="card-img-top mx-auto" alt="The Tropical Rainforest of the Osa region." style="width: 100%; height: 400px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text">A Capuchin Monkey enjoying the seasonal fruit. (Rámbutan, it is an exotic fruit)</p>
+                            </div>
+                            <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                                Slide 5 / 9 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!-- Sixth Tour Card -->
+                        <div class="card">
+                            <img src="./assets/img/banner.jpeg" loading="lazy" class="card-img-top mx-auto" alt="The Tropical Rainforest of the Osa region." style="width: 100%; height: 400px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text">El Pavón waterfall attracts visitors from all parts of the world. It is one of the most popular waterfalls in Costa Rica. And it is just 5 minutes from the reserve.</p>
+                            </div>
+                            <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                                Slide 6 / 9 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!-- Seventh Tour Card -->
+                        <div class="card">
+                            <img src="./assets/img/banner.jpeg" loading="lazy" class="card-img-top mx-auto" alt="The Tropical Rainforest of the Osa region." style="width: 100%; height: 400px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text">Uvita Beach is just 25 minutes from us. Discover the Marino Ballena National Park where the world-famous whale-shaped tombole is.</p>
+                            </div>
+                            <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                                Slide 7 / 9 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!-- Eighth Tour Card -->
+                        <div class="card">
+                            <img src="./assets/img/banner.jpeg" loading="lazy" class="card-img-top mx-auto" alt="The Tropical Rainforest of the Osa region." style="width: 100%; height: 400px; object-fit: cover;">
+                            <div class="card-body">
+                                <p class="card-text">Crax rubra (Great Curassow) taking a morning walk. They are extremely rare to be seen and they also are in ways of extinction.</p>
+                            </div>
+                            <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                                Slide 8 / 9
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!-- Ninth Tour Card -->
+                        <div class="card">
+                            <img src="./assets/img/banner.jpeg" loading="lazy" class="card-img-top mx-auto" alt="The Tropical Rainforest of the Osa region." style="width: 100%; height: 400px; object-fit: cover;">
+                            <div class="card-body"> 
+                                <p class="card-text">Eira barbara (Tayra) is part of the Mustelidae family, yes, it is a relative of the weasels! It is a carnivorous mammal, though.</p>
+                            </div>
+                            <div class="slide-number position-absolute top-0 start-0 p-2 bg-dark text-white rounded">
+                                Slide 9 / 9
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exclusive Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#gallerycarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Go Back</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#gallerycarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Go Forward</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Make images fit the card container */
+    .carta {
+        overflow: hidden; /* Ensures any overflow is hidden */
+        height: 100%; /* Ensures consistent height for the card */
+    }
+    
+    .carta-img-top {
+        object-fit: cover; /* Ensures the image covers the container without distortion */
+        width: 100%; /* Stretches the image to fit the container's width */
+        height: 400px; /* Defines a consistent height for all images */
+    }
+</style>
+
+
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+    <!-- Sección Parallax -->
+    <div class="parallax">
+        Vive una Experiencia Natural en el Bosque Tropical de Costa Rica 🌿
+    </div>
+
+    <br>
+    <br>
+
+   
+   
+        
+
+
+    <section id="client-reviews" class="py-5" style="background-color: #51c01d;
+    background-image: url('https://www.transparenttextures.com/patterns/foggy-birds.png');">
+
+        <div class="container text-center">
+            <h2 class="text-center mb-5 text-white" style= "font-size: 35px; font-weight: bold;">Reviews</h2>
+    
+            <div class="row g-4">
+                <!-- Review 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="review-item p-4 shadow-lg rounded" style="color: black; background-color: rgba(255, 255, 255, 0.9);">
+                        <i class="bi bi-person-circle text-primary" style="font-size: 50px;"></i>
+                        <h5 class="mb-2">John Doe</h5>
+                        <p class="font-italic">"PaloVerde turned our vision into reality. The team was professional, timely, and always kept us informed throughout the process. Highly recommend them for any commercial project."</p>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="review-item p-4 shadow-lg rounded" style="color: black; background-color: rgba(255, 255, 255, 0.9);">
+                        <i class="bi bi-person-circle text-primary" style="font-size: 50px;"></i>
+                        <h5 class="mb-2">Jane Smith</h5>
+                        <p class="font-italic">"The PaloVerde team exceeded our expectations in building our new home. From design to execution, they were attentive to every detail and ensured our complete satisfaction."</p>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="review-item p-4 shadow-lg rounded" style="color: black; background-color: rgba(255, 255, 255, 0.9);">
+                        <i class="bi bi-person-circle text-primary" style="font-size: 50px;"></i>
+                        <h5 class="mb-2">Mark Johnson</h5>
+                        <p class="font-italic">"I couldn’t be happier with the renovation of our office. PaloVerde's professionalism and quality of work made the entire process seamless. They truly care about their clients."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+
+<!-- Sección contacto -->
+<section id="contacto">
+    <!-- Contenido de contacto -->
+  </section>
+  
+    <section id="contacto" class="container mt-5" style="text-decoration: none;">
+        <h2 class="text-center mb-4" style="color: #51c01d; font-size: 35px; font-weight: bold;">Contacto</h2>
+    
+        <div class="row">
+            <!-- Lado Izquierdo: Información de Contacto -->
+            <div class="col-md-6">
+                <h4>Detalles de Contacto</h4>
+                <p>
+                    <strong>Tropical Forest</strong>
+                    <br />
+                    Conexión Natural | Hiking | Escalada
+                    <br>
+                    Creamos experiencias genuinas y aventura rodeados de naturaleza ubicados en La Pastora, Tarrazú, Costa Rica
+                    <br />
+                    <a href="https://maps.app.goo.gl/JgaZeyQzeRaFuHeA8" class="text-success fw-bold" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        Ver en Google Maps
+                    </a>
+                </p>
+    
+                <h4>Otras Formas de Contactarnos</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <strong>Correo Electrónico:</strong>
+                        <br />
+                        <a href="mailto:lasarrieras@gmail.com" class="text-success fw-bold" style="text-decoration: none;">
+                            <i class="bi bi-envelope me-2"></i>
+                            reservations@tropicalrainforest.com
+                        </a>
+                    </li>
+                    <li>
+                        <strong>Llamada Telefónica:</strong>
+                        <br />
+                        <a href="tel:+50663576163" class="text-success fw-bold" style="text-decoration: none;">
+                            <i class="bi bi-phone me-2"></i>
+                            +506 1234 5678
+                        </a>
+                    </li>
+                    <li>
+                        <strong>Contacto por WhatsApp:</strong>
+                        <br />
+                        <a href="https://wa.me/50663576163" class="text-success fw-bold" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                            <i class="bi bi-whatsapp me-2"></i>
+                            +506 1234 5678
+                        </a>
+                    </li>
+                    <li>
+                        <strong>Síguenos en Redes Sociales:</strong>
+                        <br />
+                        <a href="https://www.instagram.com/yourprofile" class="text-success fw-bold" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                            <i class="bi bi-instagram me-2"></i>
+                            Instagram
+                        </a>
+                        <br />
+                        <a href="https://www.tiktok.com/@yourprofile" class="text-success fw-bold" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                            <i class="bi bi-tiktok me-2"></i>
+                            TikTok
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Lado Derecho: Imagen de Ubicación -->
+            <div class="col-md-6 text-center">
+                <h4>Será un placer atender tus consultas</h4>
+                <img src="./assets/img/banner.jpeg" alt="Mapa de Nuestra Ubicación" class="img-fluid rounded shadow" style="max-width: 60%; height: auto;">
+            </div>
+        </div>
+    </section>
+    
+
+
+
+
+
+
+    <!-- Sección ubicacion -->
+<section id="ubicacion">
+    <!-- Contenido de ubicacion -->
+  </section>
+  
+      <section id="como-llegar" class="container my-5">
+        <h2 class="text-center mb-4" style="color: #51c01d; font-size: 35px; font-weight: bold;">Ubicación</h2>
+    
+        <div class="row">
+            <!-- Mapa -->
+            <div class="col-md-6">
+                <h4>Ubicación en el Mapa</h4>
+                <div class="ratio ratio-16x9">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11406.845588140937!2d-83.99627056060326!3d9.628696492855989!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa11700434593f1%3A0x5ce7976f6d35c96c!2sLlegada%20Tropical%20Forest!5e1!3m2!1ses-419!2scr!4v1741835915011!5m2!1ses-419!2scr" 
+                        width="600"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+    
+            <!-- Información de Transporte -->
+            <div class="col-md-6">
+                <h4>Opciones de Transporte</h4>
+                <ul class="list-unstyled">
+                    <li class="mb-3">
+                        <i class="bi bi-car-front-fill text-success me-2"></i>
+                        <strong>En carro:</strong> Desde el Aeropuerto Juan Santamaría, el viaje toma aproximadamente 2 horas. Se recomienda un vehículo 4x4.
+                    </li>
+                    <li class="mb-3">
+                        <i class="bi bi-bus-front-fill text-primary me-2"></i>
+                        <strong>En autobús:</strong> Tomar un bus de Musoc desde San José hasta El Empalme, luego un taxi o transporte privado hasta el punto de la actividad, nosotros te ayudamos a coordinar el transporte.
+                    </li>
+                    <li class="mb-3">
+                        <i class="bi bi-taxi-front-fill text-danger me-2"></i>
+                        <strong>En Transporte Privado:</strong> Realiza una cotización con.
+                    </li>
+                    <li class="mb-3">
+                        <i class="bi bi-geo-alt-fill text-warning me-2"></i>
+                        <strong>Coordenadas GPS:</strong> 9.628063 ° N ,-83.994797 ° O
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section id="faq" class="py-5 bg-light"> <div class="container"> <h2 class="text-center mb-5"  style="color: #51c01d; font-size: 35px; font-weight: bold;">Preguntas Frecuentes</h2> <div class="accordion" id="faqAccordion">
+      
+                <!-- Pregunta 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Qué es Tropical Forest?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Tropical Forest es una empresa especializada en ofrecer experiencias auténticas en la naturaleza, combinando aventura, sostenibilidad y educación ambiental en cada recorrido.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Pregunta 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿Dónde estamos ubicados?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Nos encontramos en el corazón de Costa Rica, rodeados de exuberantes bosques tropicales y una biodiversidad única. Nuestra ubicación exacta está disponible en la sección de contacto.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Pregunta 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ¿Qué tipo de actividades ofrecemos?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ofrecemos una variedad de actividades, incluyendo caminatas guiadas, observación de fauna y flora, recorridos en kayak, tours de avistamiento de aves y experiencias educativas sobre sostenibilidad y conservación.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Pregunta 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            ¿Cómo garantizamos la sostenibilidad?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Nuestro compromiso con la sostenibilidad se refleja en el uso responsable de los recursos naturales, la educación ambiental, la protección de la biodiversidad y el apoyo a las comunidades locales.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Pregunta 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            ¿Cómo puedo reservar una experiencia?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Puedes reservar a través de nuestro sitio web, enviándonos un correo electrónico o contactándonos por WhatsApp. Te recomendamos reservar con anticipación para asegurar tu lugar.
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        </section>
+    
+  <!-- 🟢 CONTACTO -->
+<section id="contact2" class="container my-5 py-5">
+    <div class="contact2-wrapper">
+        <h2 class="text-center mb-4" style="color: #51c01d; font-size: 35px; font-weight: bold;">Contáctanos</h2>
+        <p class="text-center text-muted mb-4">¿Tienes preguntas? ¡Escríbenos y te responderemos lo antes posible!</p>
+
+        <form id="contact-form" method="POST" action="/send-email" class="contact-form">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control input-style" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control input-style" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea class="form-control input-style" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn-reserva">Enviar Mensaje</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- 🔹 Estilos personalizados -->
+<style>
+    /* Fondo atractivo */
+    #contact2 {
+        background: linear-gradient(to right, #2c185d, #51c01d);
+        color: white;
+        border-radius: 10px;
+        padding: 40px;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Contenedor del formulario */
+    .contact2-wrapper {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+        color: black;
+    }
+
+    /* Estilos de los inputs */
+    .input-style {
+        border-radius: 8px;
+        border: 2px solid #ccc;
+        padding: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .input-style:focus {
+        border-color: #51c01d;
+        box-shadow: 0px 0px 8px rgba(81, 192, 29, 0.5);
+        outline: none;
+    }
+
+    /* Botón con efecto de transición */
+    .btn-reserva {
+        display: inline-block;
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background: #ed6227;
+        border: none;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+        transition: background 0.4s ease-in-out;
+        cursor: pointer;
+    }
+
+    .btn-reserva:hover {
+        background: #51c01d;
+    }
+</style>
+
+
+
+
+
+
+
+<!-- Botón Flotante de WhatsApp -->
+<a href="https://wa.me/50663576163" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- Estilos del Botón -->
+<style>
+    .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366;
+        color: white;
+        font-size: 28px;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+        z-index: 1000;
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="footer text-center text-md-start">
+    <div class="container">
+        <div class="row">
+            <!-- Logo and Description -->
+            <div class="col-md-4 text-center footer-logo mb-3 mb-md-0">
+                <a href="./Home.html"><img src="./assets/img/logo.jpg" loading="lazy" alt="Ecos del Bosque Logo"></a>
+                <p class="description mt-2">
+                    "Because what we do to nature we do to ourselves. Take care of the planet and leave a green footprint on your path."
+                </p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-md-4 text-md-start mb-3 mb-md-0">
+                <p>Tropical Forest Costa Rica</p>
+                <p>Zona de Los Santos<br>San Marcos de Tarrazú, San José, Costa Rica</p>
+                <p><i class="bi bi-telephone-fill"></i> +506 1234 5678</p>
+                <p>
+                    <a href="https://wa.me/50663576163" style="text-decoration: none; color: inherit;">
+                        <i class="bi bi-whatsapp"></i> +506 1234 5678
+                    </a>
+                </p>
+                <p><i class="bi bi-envelope-fill"></i> 
+                    <a href="mailto:reservations@ecosdelbosque.com">reservations@tropicalrainforest.com</a>
+                </p>                
+
+        <!-- Redes Sociales -->
+<div class="social-icons">
+    <a href="https://www.facebook.com/@ecosdelbosquecr" target="_blank" aria-label="Facebook">
+        <i class="bi bi-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/ecosdelbosquecr" target="_blank" aria-label="Instagram">
+        <i class="bi bi-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@ecosdelbosquecr" target="_blank" aria-label="TikTok">
+        <i class="bi bi-tiktok"></i>
+    </a>
+
+</div>
+
+            </div>
+
+            <!-- Footer Links -->
+            <div class="col-md-4 text-md-end">
+                <ul class="list-unstyled">
+                    <li><a href="#tours">Tours</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#presentacion">Nosotros</a></li>
+                    <li><a href="#contacto">Ayuda</a></li>
+                    <li><a href="#presentacion">Sostenibilidad e Impacto</a></li>
+                    <li><a href="#ubicacion">Cómo llegar aquí</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="row">
+            <div class="col-12 bottom-bar mt-4">
+                <a href="./policies.html"><i class="fas fa-file-alt"></i> Terms of Use</a> | 
+                <a href="./policies.html"><i class="fas fa-lock"></i> Privacy Policy</a>
+                <p class="mt-2"><a href="https://www.nativainnovations.com" target="_blank">Website developed by Nativa Innovations</a> - All Rights Reserved 2024</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+</body>
+</html>
