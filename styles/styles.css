@@ -1,7 +1,4 @@
-.hero-section {
-    height: 100vh;
-    background: url('images/hero.jpg') no-repeat center center/cover;
-}
+
 .card img {
     height: 200px;
     object-fit: cover;
@@ -9,14 +6,13 @@
 
 
 body {
-    font-family: 'Poppinns', sans-serif;
+    font-family: 'arial', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #333;
     margin: 0;
     padding: 0;
 }
-
 
 
 
@@ -72,8 +68,10 @@ body {
 }
 
 
+
+
 .hero-section {
-    background-image: url('../assets/img/banner.jpeg'); /* Change to your image path */
+    background-image: url('../assets/img/main.webp'); /* Change to your image path */
     background-size: cover; /* Cover the entire section */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* No repeating */
@@ -92,13 +90,13 @@ body {
 
 
 
-
-
-
-
-
-
-
+.gallery-img {
+    width: 100%; /* Ensures images take full width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 10px; /* Keeps the rounded edges */
+    margin-bottom: 10px;
+}
 
 
 
@@ -113,7 +111,7 @@ body {
 
    /* Fondo Parallax */
    .parallax {
-    background-image: url('../assets/img/img3.jpg'); /* Cambia la URL */
+    background-image: url('../assets/img/hikingandwaterfalls.webp'); /* Cambia la URL */
     height: 900px;
     background-attachment: fixed;
     background-position: center;
@@ -134,6 +132,43 @@ body {
     text-align: center;
     background-color: #f8f9fa;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.leaf-left {
+    width: 10%; /* Reduce el tamaño de la imagen al 10% de su tamaño original */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    float: left; /* Coloca la imagen a la izquierda */
+}
+
+.leaf-right {
+    width: 10%; /* Reduce el tamaño de la imagen al 10% de su tamaño original */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    float: right; /* Coloca la imagen a la izquierda */
+}
+
+
+
+
+.leaf-tour {
+    width: 35%; /* Reduce el tamaño de la imagen al 10% de su tamaño original */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    display: block; /* Hace que la imagen sea un bloque */
+    margin-left: auto; /* Centra la imagen */
+    margin-right: auto; /* Centra la imagen */
+    margin-top: 140px;
+}
+
 
 
 
