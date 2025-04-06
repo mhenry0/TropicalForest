@@ -213,7 +213,7 @@ iframe {
     color: white;
     padding: 70px 0;
     position: relative;
-    height: 700px;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,7 +223,7 @@ iframe {
 /* Increased height on small screens */
 @media (max-width: 767px) {
     .footer {
-        height: 1000px; /* Adjust this value as desired */
+        height: 800px; /* Adjust this value as desired */
         padding: 100px 0; /* Optional: increased padding for better spacing */
     }
 }
