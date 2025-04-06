@@ -1,23 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Landing Page - Tours</title>
-        <!-- Add Bootstrap Icons CDN link -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>        
-        <!-- Estilos personalizados -->
-        <link rel="stylesheet" href="./styles/styles.css">
-    </head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="./assets/img/logo.png">
+    <title>Tropical Forest CR</title>
+    <meta name="description" content="Explore the tropical forest of San Marcos de Tarrazú with Tropical Forest CR. Enjoy tree climbing, treetop picnics, and waterfall hikes. Book your adventure today!">
+    <meta name="keywords" content="Tropical Forest, San Marcos de Tarrazú, tree climbing, treetop picnics, waterfall hikes, ecotourism, adventure tours, Costa Rica">
+    <!-- Add Bootstrap Icons CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Incluir el CSS de AOS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Incluir el JS de AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+
+
+    <script src="./script/index.js"></script>
+
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
 <body>
 
     <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
         <div class="container">
             <a class="navbar-brand" href="./index.html">
-                <img src="./assets/img/logo.jpg" alt="Tropical Forest CR Logo" width="60" height="60">
+                <img src="./assets/img/logo.png" alt="Tropical Forest CR Logo" width="60" height="60">
                 Tropical Forest
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -27,11 +44,11 @@
     
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Presentación</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Tours</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Galería</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#us">Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tours">Tours</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
                     <li class="nav-item">
                         <button class="btn btn-link text-success" id="translate-button">
                             <i class="bi bi-translate" style="font-size: 1.5rem;"></i>
@@ -44,6 +61,7 @@
             </div>
         </div>
     </nav>
+    
     
     <!-- Script de Google Translate -->
     <script type="text/javascript">
@@ -113,7 +131,7 @@
     <strong>7. Amendments to Terms</strong><br>
     Tropical Forest reserves the right to update or modify these Terms of Use at any time. Continued use of the website after any changes indicates your acceptance of the revised terms. We recommend reviewing these terms periodically.<br><br>
     <strong>8. Contact Information</strong><br>
-    For inquiries regarding these Terms of Use, please contact us at reservations@ecosdelbosque.com.<br><br>
+    For inquiries regarding these Terms of Use, please contact us at  +506 8587 4136.<br><br>
     By continuing to use this website, you affirm your understanding and agreement to these Terms of Use and our Privacy Policy.
   </p>
   <br>
@@ -168,7 +186,7 @@
     <p>If you have questions or concerns regarding our Privacy Policy or your personal data, please contact us at:</p>
 
     <p><strong>Tropical Forest</strong><br>
-    Email: info@ecosdelbosquereserve.com<br>
+    WhatsApp:  +506 8587 4136<br>
   
 
     <br>
@@ -189,7 +207,7 @@
 <br>
 <br>
 
-<a href="./index.html" class="btn btn-success" style="padding-left: 20px;">Back to Main</a>
+<a href="./index.html" target="_blank" class="btn-contacto">BACK TO MAIN</a>
 </div>
 <br>
 <br>
@@ -237,72 +255,88 @@
 
 
 
-
-
-<!-- Footer Section -->
-<footer class="footer text-center text-md-start">
+<!-- 18 px utility (place once in your main CSS) -->
+<style>
+    .fs-18 { font-size: 18px !important; }
+  </style>
+  
+  <!-- ===== Footer Section ===== -->
+  <footer class="footer text-center text-md-start fs-18"><!-- font‑size everywhere -->
     <div class="container">
-        <div class="row">
-            <!-- Logo and Description -->
-            <div class="col-md-4 text-center footer-logo mb-3 mb-md-0">
-                <img src="./assets/img/logo.jpg" loading="lazy" alt="Tropical Forest Logo">
-                <p class="description mt-2">
-                    "Because what we do to nature we do to ourselves. Take care of the planet and leave a green footprint on your path."
-                </p>
-                <p><i class="fas fa-coins"></i> We are crypto-friendly: BTC / ETH</p>
-            </div>
-
-            <!-- Contact Information -->
-            <div class="col-md-4 text-md-start mb-3 mb-md-0">
-                <p>Tropical Forest</p>
-                <p>Puntarenas Province<br>Vergel, Osa region, Costa Rica</p>
-                <p><i class="fas fa-phone-alt"></i> +506 8577-6163</p>
-                <p>
-                    <a href="https://wa.me/50685776163" style="text-decoration: none; color: inherit;">
-                        <i class="fab fa-whatsapp"></i> +506 8577-6163
-                    </a>
-                </p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:reservations@ecosdelbosque.com">reservations@ecosdelbosque.com</a></p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/@ecosdelbosquecr" target="_blank" aria-label="Facebook">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/ecos_del_bosque_" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@ecosdelbosquecr" target="_blank" aria-label="TikTok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Footer Links -->
-            <div class="col-md-4 text-md-end">
-                <ul class="list-unstyled">
-                    <li><a href="#contact" target="_blank">Contact</a></li>
-                    <li><a href="./Us.html" target="_blank">About Us</a></li>
-                    <li><a href="./Contact.html" target="_blank">How to Support</a></li>
-                    <li><a href="./Contact.html" target="_blank">Help</a></li>
-                    <li><a href="./About.html" target="_blank">Sustainability and Impact</a></li>
-                    <li><a href="./Tours.html" target="_blank">Tours</a></li>
-                    <li><a href="./About.html" target="_blank">How to Get Here</a></li>
-                </ul>
-            </div>
+      <div class="row">
+        <!-- Logo -->
+        <div class="col-md-4 text-center footer-logo mb-3 mb-md-0">
+          <a href="./Home.html">
+            <img src="./assets/img/logo.png" alt="Ecos del Bosque Logo" loading="lazy">
+          </a>
         </div>
-
-        
-
-        <!-- Bottom Bar -->
-        <div class="row">
-            <div class="col-12 bottom-bar mt-4">
-                <a href="./policies.html"><i class="fas fa-file-alt"></i> Terms of Use</a> | 
-                <a href="./policies.html"><i class="fas fa-lock"></i> Privacy Policy</a>
-                <p class="mt-2"><a href="https://www.nativainnovations.com" target="_blank">Website developed by Nativa Innovations</a> - All Rights Reserved 2024</p>
-            </div>
+  
+        <!-- Contact & social -->
+        <div class="col-md-4 text-md-start mb-3 mb-md-0">
+          <p class="mb-1">Tropical Forest Costa Rica</p>
+          <p class="mb-1">
+            Zona de Los Santos<br>San Marcos de Tarrazú, San José, Costa Rica
+          </p>
+          <p class="mb-1">
+            <i class="bi bi-telephone-fill me-1"></i> +506 8587 4136
+          </p>
+          <p class="mb-1">
+            <a href="https://wa.me/50685874136" class="text-reset text-decoration-none">
+              <i class="bi bi-whatsapp me-1"></i> +506 8587 4136
+            </a>
+          </p>
+         
+  
+          <div class="social-icons">
+           
+            <a href="https://www.instagram.com/tropicalforestcr" target="_blank" aria-label="Instagram" class="me-2 text-reset">
+              <i class="bi bi-instagram"></i> Tropical Forest CR
+            </a>
+           
+          </div>
         </div>
+  
+        <!-- Quick links -->
+        <div class="col-md-4 text-md-end">
+          <ul class="list-unstyled mb-0">
+            <li><a href="#tours" class="text-reset text-decoration-none">Tours</a></li>
+            <li><a href="#faq" class="text-reset text-decoration-none">FAQ</a></li>
+            <li><a href="#contact" class="text-reset text-decoration-none">Contact</a></li>
+            <li><a href="#us" class="text-reset text-decoration-none">About Us</a></li>
+            <li><a href="#contact" class="text-reset text-decoration-none">Help</a></li>
+            <li><a href="#us" class="text-reset text-decoration-none">Sustainability & Impact</a></li>
+            <li><a href="#location" class="text-reset text-decoration-none">How to Get Here</a></li>
+          </ul>
+        </div>
+      </div>
+  <!-- Bottom bar -->
+<div class="row mt-4 pt-3 border-top border-secondary-subtle">
+    <div class="col-12 text-center small fs-18">
+      <a href="./policies.html" class="text-reset text-decoration-none me-2">
+        <i class="bi bi-file-earmark-text"></i> Terms of Use
+      </a>
+      |
+      <a href="./policies.html" class="text-reset text-decoration-none ms-2">
+        <i class="bi bi-shield-lock"></i> Privacy Policy
+      </a>
+  
+      <!-- Credit line -->
+      <div class="mt-2">
+        <a href="https://www.nativainnovations.com"
+           target="_blank"
+           class="text-reset text-decoration-none">
+          Website developed by Nativa Innovations
+        </a>
+        &nbsp;– All Rights Reserved 2025
+      </div>
+  
+      
     </div>
-
-</footer>
+  </div>
+  
+    </div>
+  </footer>
+  
 
 <!-- Bootstrap JS (necessary for Navbar toggle functionality) -->
 </body>
