@@ -95,20 +95,102 @@
     </script>
     
     
+<!-- 🟢 HERO SECTION – 5-image slider -->
+<header id="hero" class="hero-section position-relative">
 
-<!-- 🟢 HERO SECTION -->
-<header id="hero" class="hero-section d-flex align-items-center text-white text-center">
-    <div class="container" style="color: #2c185d; background-color: rgba(255, 255, 255, 0.341);">
-        <p class="display-4">Explore San Marcos de Tarrazú with Tropical Forest</p>
-        <p class="lead" style="font-size: 25px;">Dive into incredible landscapes and live unforgettable experiences</p>
-        
-        <!-- Custom reservation button -->
-        <a href="https://wa.me/50685874136" target="_blank"class="btn-reserva">BOOK</a>
-        <a href="https://wa.me/50685874136" target="_blank" class="btn-contacto">CONTACT</a>
-
+  <!-- Carousel wrapper -->
+<!-- A. remove data-bs-ride completely and add data-bs-interval="false" -->
+<div id="heroCarousel"
+     class="carousel slide carousel-fade"
+     data-bs-interval="false">
+  
+     <!-- Indicators (optional) -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
     </div>
-</header>
 
+    <!-- Slides -->
+    <div class="carousel-inner">
+
+      <!-- Slide template -->
+      <!-- Repeat + change data-bs-interval (or remove) as needed -->
+<div class="carousel-item active" data-bs-interval="5000">
+  <div class="slide-bg" style="background-image:url('./assets/img/main.webp');"></div>
+
+  <!-- CONTENT -->
+  <div class="slide-content">
+    <div class="overlay-box">
+      <p class="display-6 mb-3">Explore San Marcos de Tarrazú with Tropical Forest</p>
+      <p class="lead mb-4" style="font-size:20px;">Discover its charming wildlife with the best tour operator. </p>
+      <a href="https://wa.me/50685874136" target="_blank" class="btn-reserva me-4">BOOK HERE</a>
+    </div>
+  </div>
+</div>
+
+
+       <div class="carousel-item " data-bs-interval="5000">
+  <div class="slide-bg" style="background-image:url('./assets/img/treetoppicnic.webp');"></div>
+
+  <!-- CONTENT -->
+  <div class="slide-content">
+    <div class="overlay-box">
+      <p class="display-6 mb-3">Unwind in the Treetops</p>
+      <p class="lead mb-4" style="font-size:20px;">Enjoy a warm cup of coffee from the top producing region while surrounded by a natural landscape around our nets.</p>
+      <a href="https://wa.me/50685874136" target="_blank" class="btn-reserva me-4">BOOK HERE</a>
+    </div>
+  </div>
+</div>
+       <div class="carousel-item " data-bs-interval="5000">
+  <div class="slide-bg" style="background-image:url('./assets/img/connectionwithnature.webp');"></div>
+
+  <!-- CONTENT -->
+  <div class="slide-content">
+    <div class="overlay-box">
+      <p class="display-6 mb-3">A Place to Reconnect with Yourself</p>
+      <p class="lead mb-4" style="font-size:20px;">La Pastora is a vibrant community with wonders in every place. Come to witness it!</p>
+      <a href="https://wa.me/50685874136" target="_blank" class="btn-reserva me-4">BOOK HERE</a>
+    </div>
+  </div>
+</div>
+     <div class="carousel-item " data-bs-interval="5000">
+  <div class="slide-bg" style="background-image:url('./assets/img/gallery3.webp');"></div>
+
+  <!-- CONTENT -->
+  <div class="slide-content">
+    <div class="overlay-box">
+      <p class="display-6 mb-3">The Wildlife from Highlands is Unmatched</p>
+      <p class="lead mb-4" style="font-size:20px;">La Pastora offers a rare opportunity to explore the highlands while being close to a cultural coffee town. The best of both worlds for nature and coffee lovers!</p>
+      <a href="https://wa.me/50685874136" target="_blank" class="btn-reserva me-4">BOOK HERE</a>
+    </div>
+  </div>
+</div>
+        <div class="carousel-item " data-bs-interval="5000">
+  <div class="slide-bg" style="background-image:url('./assets/img/treeclimbing4.webp');"></div>
+
+  <!-- CONTENT -->
+  <div class="slide-content">
+    <div class="overlay-box">
+      <p class="display-6 mb-3">Experience is not Mandatory</p>
+      <p class="lead mb-4" style="font-size:20px;">You do not need to be a professional climber to enjoy the tour. We help you in the process with the best professionals and gear.</p>
+      <a href="https://wa.me/50685874136" target="_blank" class="btn-reserva me-4">BOOK HERE</a>
+    </div>
+  </div>
+</div>
+    </div>
+
+    <!-- Prev / next arrows -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</header>
 
 
 
@@ -119,9 +201,10 @@
 
     <!-- 🟢 PRESENTACIÓN -->
     <section id="us" class="container my-5 text-center">
-        <h1 style="color:#51c01d;font-size:35px;font-weight:600;">
+        <h1 style="color:#51c01d;font-size:45px;font-weight:600;">
             WELCOME TO TROPICAL FOREST
         </h1>
+        
           
           <!-- Coordinates -->
           <p style="margin-bottom: 50px; margin-top: 5px;">
@@ -136,8 +219,8 @@
             environment.<br><br>
             Located in the beautiful region of La Pastora, Tarrazú, in the Los Santos
             Zone, San Marcos de Tarrazú, Costa Rica, we offer activities such as
-            <strong>hiking</strong>, <strong>tree climbing</strong>, and
-            <strong>picnics on treetops</strong>. Each adventure is designed to immerse
+            <strong style="color: #51c01d;font-weight: bold;">hiking</strong>, <strong style="color: #51c01d;font-weight: bold;">tree climbing</strong>, and
+            <strong style="color: #51c01d;font-weight: bold;">picnics on treetops</strong>. Each adventure is designed to immerse
             our visitors in stunning landscapes and provide them with a unique
             connection to the local biodiversity.<br><br>
             At Tropical Forest, the experience goes beyond just adventure; we also
@@ -171,7 +254,7 @@
 
     <!-- 🟢 TOURS: Escalada de Árboles -->
 <section id="tours" class="container my-5">
-    <h2 class="text-center mb-5" style="color: #51c01d; font-size: 35px; font-weight: bold;">TOURS</h2>
+    <h2 class="text-center mb-5" style="color: #51c01d; font-size: 50px; font-weight: bold;">TOURS</h2>
     <p class="lead" style="text-align: justify;">
         Explore our 3 main activities! Each one is designed to offer you a unique experience in the heart of nature, surrounded by the lush landscapes of the La Pastora region, Tarrazú.<br><br>
         Choose the adventure that best suits your preferences and enjoy an unforgettable day in the Costa Rican tropical forest.<br><br>

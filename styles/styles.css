@@ -59,7 +59,7 @@ footer {
 
 
 .custom-navbar {
-    background-color: #ffffff; /* Dark Green */
+    background-color: #ffffffbc; /* Dark Green */
 }
 
 .custom-navbar .navbar-brand,
@@ -77,22 +77,43 @@ footer {
 
 
 
-.hero-section {
-    background-image: url('../assets/img/main.webp'); /* Change to your image path */
-    background-size: cover; /* Cover the entire section */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* No repeating */
-    height: 130vh; /* Full screen height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white; /* Ensure text is visible */
+/* --- Slider helpers --- */
+#hero { min-height: 75vh; }               /* adjust height as you like */
+
+
+/* HERO slider ─––––––––––––––––––––––––––––– */
+#hero,
+#hero .carousel,
+#hero .carousel-inner,
+#hero .carousel-item,
+#hero .slide-bg,
+#hero .slide-content {
+    height: 100vh;        /* ⬅︎ change to 90vh, 80vh, etc. if preferred */
 }
 
-.hero-section .container {
-    padding: 30px;
-    border-radius: 10px;
-    
+
+.slide-bg {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  inset: 0;             /* fills the slide */
+  z-index: 0;
+}
+
+.slide-content {
+  position: relative;   /* places overlay above background */
+  height: 100%;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Optional: darken images a bit for text legibility */
+.slide-bg::after{
+  content:"";
+  position:absolute; inset:0;
+  background:rgba(0,0,0,.35);
 }
 
 
@@ -108,6 +129,37 @@ footer {
 
 
 
+/* Make the slide fill its parent (unchanged) */
+.slide-bg,
+.slide-content,
+.carousel-item          { height:100%; }
+
+/* TEXT BOX – fixed in the top-left */
+.overlay-box{
+  position:absolute;
+  top:10rem;              /* distance from top edge */
+  left:6rem;             /* distance from left edge */
+  background:rgba(0, 0, 0, 0.157);  /* translucent dark panel */
+  color:#fff;
+  padding:2rem 2.5rem;
+  max-width:420px;       /* avoid stretching too wide on desktops */
+}
+
+/* Keep links inline */
+.overlay-box a{
+  display:inline-block;
+  margin-bottom:.5rem;
+}
+
+/* OPTIONAL: responsive tweak – nudge inwards on very small screens */
+@media (max-width:575.98px){
+  .overlay-box{
+    top:1rem;
+    left:1rem;
+    padding:1.25rem 1.5rem;
+    max-width:90%;
+  }
+}
 
 
 
@@ -261,7 +313,7 @@ iframe {
 
     .btn-reserva, .btn-contacto {
         display: inline-block;
-        padding: 12px 30px;
+        padding: 10px 30px;
         font-size: 18px;
         font-weight: bold;
         color: white;
@@ -314,3 +366,5 @@ iframe {
 #51c01d
 
 #2c185d
+
+
