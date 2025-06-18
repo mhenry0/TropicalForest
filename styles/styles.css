@@ -151,17 +151,19 @@ footer {
   margin-bottom:.5rem;
 }
 
-/* OPTIONAL: responsive tweak – nudge inwards on very small screens */
-@media (max-width:575.98px){
+
+/* 2️⃣  Phones  –– centred on the slide */
+@media (max-width:575.98px){      /* Bootstrap xs breakpoint */
   .overlay-box{
-    top:1rem;
-    left:1rem;
-    padding:1.25rem 1.5rem;
-    max-width:90%;
+    top:50%;
+    left:30%;
+    transform:translate(-50%, -50%);   /* true centring */
+    text-align:center;                 /* centre the text */
+    max-width:90%;     
+    font-size: 20px;                /* keep a little margin */
   }
+
 }
-
-
 
 
 
