@@ -162,6 +162,19 @@ footer {
     max-width:90%;     
     font-size: 20px;                /* keep a little margin */
   }
+    .btn-reserva {
+        display: inline-block;
+        padding: 10px 30px;
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+        z-index: 1;
+    }
 
 }
 
