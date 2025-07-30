@@ -60,6 +60,7 @@ footer {
 
 .custom-navbar {
     background-color: #ffffffbc; /* Dark Green */
+      transition: top 0.3s;
 }
 
 .custom-navbar .navbar-brand,
@@ -74,6 +75,10 @@ footer {
     color: #ed6227 !important; /* Yellow on hover */
 }
 
+/* Hidden state */
+.navbar-hide {
+  top: -100px; /* Adjust depending on navbar height */
+}
 
 
 
